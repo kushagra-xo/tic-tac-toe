@@ -1,4 +1,4 @@
-import { useState } from "react";
+import {useState } from "react";
 import "./App.css"
 
 function Square({value, onSquareClick}) {
@@ -27,7 +27,10 @@ function calculateWinner(squares) {
 
 export default function Board() {
   
-
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      document.body.className = "dark";
+  }
+  
   const [squares, setSquares] = useState(Array(9).fill(null));
   const [xIsNext, setXIsNext] = useState(true);
   const [squaresLeft, setSquaresLeft] = useState(9);  
@@ -66,8 +69,10 @@ export default function Board() {
   }
   
   return (
-    <>
-      <div className="status">{status}</div>
+    <div className="board">
+      <h1>Tic Tac Toe</h1>
+      <p className="subhead">XOXO and Ready to Go!</p>
+      <h3 className="status">{status}</h3>
       <div className="board-row">
         <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
         <Square value={squares[1]} onSquareClick={() => handleClick(1)} />
@@ -83,6 +88,7 @@ export default function Board() {
         <Square value={squares[7]} onSquareClick={() => handleClick(7)} />
         <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
       </div>
-    </>
+      <p className="foot">Made with X's, O's, and a lot of 🩷</p>
+    </div>
   );
 }
