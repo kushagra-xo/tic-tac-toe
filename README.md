@@ -7,6 +7,7 @@
 ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)
 ![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)
 ![Contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen?style=for-the-badge&logo=github)
+![Open Source](https://img.shields.io/badge/Open%20Source-YES-green?style=for-the-badge)
 ![MIT License](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)
 ![Last Commit](https://img.shields.io/github/last-commit/kushagra-xo/tic-tac-toe?style=for-the-badge&logo=github)
 
