@@ -10,7 +10,6 @@ export default function Board() {
   
   const [squares, setSquares] = useState(Array(9).fill(null));
   const [xIsNext, setXIsNext] = useState(true);
-  const [squaresLeft, setSquaresLeft] = useState(9);  
   const [history, setHistory] = useState([]);
 
   const winner = calculateWinner(squares);
@@ -19,7 +18,7 @@ export default function Board() {
 
   if (winner) {
     status = "Winner: " + winner;
-  } else if( squaresLeft === 0){
+  } else if(!squares.some(sqaure => sqaure === null)){
     status = "Tie"
   } else {
     status = "Next player: " + (xIsNext ? "X" : "O");
@@ -33,7 +32,6 @@ export default function Board() {
     const nextSquares = squares.slice();
     xIsNext ? nextSquares[i] = "X" : nextSquares[i] = "O";
 
-    setSquaresLeft(squaresLeft-1);
     setHistory([...history, squares]);
     console.log(history)
     setSquares(nextSquares);
