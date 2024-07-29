@@ -67,7 +67,7 @@ export default function Board() {
         </div>
         <div className="timeTravel">
           <h3>Time Travel</h3>
-          <Log history={history} setSquares={setSquares} setHistory={setHistory}/>
+          <Log history={history} setSquares={setSquares} setHistory={setHistory} setXIsNext={setXIsNext}/>
         </div>
       </main>
       <footer className="foot">Made with X's, O's, and a lot of &lt;3</footer>
@@ -99,10 +99,11 @@ function calculateWinner(squares) {
   return null;
 }
 
-function Log({history, setSquares, setHistory}){
+function Log({history, setSquares, setHistory, setXIsNext}){
   function jumpMove(squares, index){
     setSquares(squares);  
     setHistory(history.slice(0, index));
+    setXIsNext(index % 2 === 0);
   }
       return (
         <>
