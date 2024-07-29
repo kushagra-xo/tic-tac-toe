@@ -99,7 +99,7 @@ function Log({history, setSquares, setHistory, setXIsNext}){
         {history.map((squares, index) => (
           <li key={index}>
             <button onClick={() => jumpMove(squares, index)}>
-              Jump back to move {index+1}
+              {index === 0 ? "Go to Game Start" : "Jump back to move " + (index+1)}
             </button>
           </li>
         ))}
