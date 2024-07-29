@@ -64,7 +64,7 @@ export default function Board() {
           </div>
         </div>
         <div className="timeTravel">
-          <h3>Time Travel</h3>
+          {history.length > 0 && <h3>Time Travel</h3>}
           <Log history={history} setSquares={setSquares} setHistory={setHistory} setXIsNext={setXIsNext}/>
         </div>
       </main>
