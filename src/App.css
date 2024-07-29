@@ -23,6 +23,17 @@ body {
     background-color: #141414;
     color: white;
   }
+  li button{
+    background-color: #1f1f1f;
+    color: white;
+    border: none;
+    height: 2rem;
+    margin: 4px;
+    padding: 10px;
+    font-size: small;
+    border-radius: 6px;
+    text-align: center;
+}
 }
 
 .square {
@@ -66,6 +77,24 @@ h1{
 
 .subhead{
   margin-bottom: 5rem;
+}
+
+.foot{
+  margin-top: 5rem;
+}
+
+main{
+  min-height: 100%;
+}
+
+li{
+  list-style-type: none;
+}
+
+.timeTravel{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 @media (max-width: 600px) {
