@@ -11,9 +11,7 @@ export default function Board() {
   const [squares, setSquares] = useState(Array(9).fill(null));
   const [xIsNext, setXIsNext] = useState(true);
   const [history, setHistory] = useState([]);
-
   const winner = calculateWinner(squares);
-
   let status;
 
   if (winner) {
@@ -33,19 +31,14 @@ export default function Board() {
     xIsNext ? nextSquares[i] = "X" : nextSquares[i] = "O";
 
     setHistory([...history, squares]);
-    console.log(history)
     setSquares(nextSquares);
     setXIsNext(!xIsNext);
   }
   
   return (
-    <div className="board">
-      <header>
+    <div>
         <h1>Tic Tac Toe</h1>
         <p className="subhead">XOXO and Ready to Go!</p>
-      </header>
-      <main>
-        <div className="board">
           <h3 className="status">{status}</h3>
           <div className="board-row">
             <Square value={squares[0]} onSquareClick={() => handleClick(0)} />
@@ -62,12 +55,10 @@ export default function Board() {
             <Square value={squares[7]} onSquareClick={() => handleClick(7)} />
             <Square value={squares[8]} onSquareClick={() => handleClick(8)} />
           </div>
-        </div>
         <div className="timeTravel">
           {history.length > 0 && <h3>Time Travel</h3>}
           <Log history={history} setSquares={setSquares} setHistory={setHistory} setXIsNext={setXIsNext}/>
         </div>
-      </main>
       <footer className="foot">Made with X's, O's, and a lot of &lt;3</footer>
     </div>
   );
