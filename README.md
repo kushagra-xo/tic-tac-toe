@@ -41,9 +41,9 @@ npm install
 
 Start the development server:
 
-bash
-
+```bash
 npm start
+```
 
 Open your browser and navigate to http://localhost:3000 to play the game!
 
