@@ -31,11 +31,11 @@ Make sure you have the following installed:
 
 Clone the repository and install the dependencies:
 
-bash
-
+```bash
 git clone https://github.com/yourusername/tic-tac-toe-react.git
 cd tic-tac-toe-react
 npm install
+```
 
 ## Running the Game
 
